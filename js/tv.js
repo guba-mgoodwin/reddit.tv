@@ -24,12 +24,13 @@ var Globals = {
         {channel: 'TIL', type: 'search', feed: '/r/todayilearned/'},
         {channel: 'PBS', type: 'domain', feed: '/domain/video.pbs.org/'},
         {channel: 'TED', type: 'domain', feed: '/domain/ted.com/'},
+        {channel: 'TheDailyShow', type: 'domain', feed: '/domain/thedailyshow.com/'},
         {channel: 'Politics', type: 'search', feed: '/r/politics/'},
         {channel: 'Atheism', type: 'search', feed: '/r/atheism/'},
         {channel: 'Sports', type: 'normal', feed: '/r/sports/'}
         ],
 
-    promo: {
+/*  promo: {
 
         'channel': 'Vice',
         'type': 'youtube',
@@ -54,7 +55,7 @@ var Globals = {
                 'id': '5jhYMlfuVNI'
             }
         ]
-    },
+    }, */
 
     /* Video Domains */
     domains: [
