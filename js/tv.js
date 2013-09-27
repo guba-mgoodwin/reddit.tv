@@ -30,33 +30,6 @@ var Globals = {
         {channel: 'Sports', type: 'normal', feed: '/r/sports/'}
         ],
 
-/*  promo: {
-
-        'channel': 'Vice',
-        'type': 'youtube',
-        'videos': [
-            {
-                'id': 'X51rPtxmd3Y',
-                'title': 'VICE Season 1 Trailer'
-            },
-
-            {
-                'title': 'VICE Season 1 Preview',
-                'id': '56lGttuY0cY'
-            },
-
-            {
-                'title': 'What is VICE? Featurette',
-                'id': 'UT18_goPvHc'
-            },
-
-            {
-                'title': 'What is VICE? Extended Version',
-                'id': '5jhYMlfuVNI'
-            }
-        ]
-    }, */
-
     /* Video Domains */
     domains: [
         '5min.com', 'abcnews.go.com', 'animal.discovery.com', 'animoto.com', 'atom.com',
@@ -106,42 +79,7 @@ $().ready(function(){
     loadSettings();
     loadTheme(Globals.theme);
     displayChannels();
-
-    if ('promo' in Globals) {
-
-        var $channelList = $('#channel-list');
-        $channelList.addClass('promo');
-
-        var $promoList = $('#promo-channel').append($('<ul/>'));
-        $promoList.find('ul').append($('<li/>').text(Globals.promo.channel));
-        $promoList.find('li').addClass('chan-selected');
-
-
-        function loadThePromo () {
-
-            loadPromoVideoList();
-
-            var type = 'youtube';
-            var id = Globals.promo.videos[0].id;
-            var desc = Globals.promo.videos[0].title;
-            loadPromo(type, id, desc);
-            Globals.cur_chan = -1;
-            Globals.cur_video = 0;
-        }
-
-        $promoList.find('li').on('click', function () {
-
-            $promoList.find('li').addClass('chan-selected');
-            $channelList.find('li').removeClass('chan-selected');
-            loadThePromo();
-        });
-
-        loadThePromo();
-    }
-    else {
-
-        loadChannel("Videos", null);
-    }
+    loadChannel("Videos", null);
 
 
     /* Bindings */
